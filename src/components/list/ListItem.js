@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
-import { width } from '../../assets/style/main'
+import { width, textStyles } from '../../assets/style/main'
 import { colorsComponent } from '../../assets/style/color'
 import { shadow } from '../../assets/style/ShadowStyle'
  
@@ -24,7 +24,7 @@ const ListItem = (props) => {
                 />
             </View>
             <View style={styles.title_box} >
-            <Text>{item.name}</Text>
+            <Text style={[textStyles.bold]} >{item.name}</Text>
                 </View>
         
         </View>
