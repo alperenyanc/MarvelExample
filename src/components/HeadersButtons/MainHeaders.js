@@ -27,14 +27,7 @@ import { textStyles } from '../../assets/style/main';
 
 
 export const DetailHeader = (props) => {
-	/**
-	 * It takes arguments below, and none of them required
-	 * leftAction & rightAction passes the onPress events. By default it will approach goBack() function from navigation. If you wan't just a icon without action you can pass "() => {}" as a left/rightAction
-	 * title: text element which will be rendered at the center of the header
-	 * navigation: takes navigation props
-	 * leftIcon/rightIcon: takes name of the icon **in the imagesEvent** example: leftIcon="back" will get following image -> imagesEvent.back
-	 * leftAction/rightAction: defines functionality of left or right button
-	 */
+	 
 	const {
 		navigation,
 		leftIcon,
@@ -125,7 +118,7 @@ const styles = StyleSheet.create({
 		flexDirection:'row'
 	  },
 	  headerTitle: {
-		fontSize: 16,     
+		fontSize: 20,     
 		alignSelf:'center'
 	  },
 });

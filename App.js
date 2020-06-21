@@ -1,8 +1,7 @@
 import React from 'react';
-import { Button, View, Text, SafeAreaView } from 'react-native';
+import {  View, SafeAreaView } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { NavigationContainer } from '@react-navigation/native'; 
 import { createStackNavigator} from '@react-navigation/stack'; 
 import Contact from "./src/screens/drawer/Contact";
 import AboutUs from "./src/screens/drawer/AboutUs";
@@ -10,7 +9,7 @@ import CharactersList from "./src/screens/list/CharactersList";
 import CharactersDetail from "./src/screens/detail/CharactersDetail"
 import { initializeStores } from "./src/store/Configure.store.js";
 import { Provider } from "mobx-react";
-import NotificationsScreen from './src/screens/drawer/NotificationsScreen';
+ 
  
 const Stack = createStackNavigator();
 function HomeScreen() {
@@ -63,7 +62,7 @@ export default class App extends React.Component {
         }}
         initialRouteName="Home">
           <Drawer.Screen name="Home" component={HomeScreen} />
-          <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+           
           <Drawer.Screen name="Contact" component={Contact} />
           <Drawer.Screen name="AboutUs" component={AboutUs} />
           
