@@ -24,7 +24,9 @@ const ListItem = (props) => {
                 />
             </View>
             <View style={styles.title_box} >
-            <Text style={[textStyles.bold]} >{item.name}</Text>
+            <Text 
+            numberOfLines={2}
+            style={[textStyles.bold,{fontSize:14}]} >{item.name}</Text>
                 </View>
         
         </View>
