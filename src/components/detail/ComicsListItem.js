@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
 import {colorsComponent} from '../../assets/style/color';
 import moment from 'moment';
-import {textStyles} from '../../assets/style/main';
+import { textStyles } from '../../assets/style/main';
 
 const ComicsListItem = (props) => {
   const {item} = props;
@@ -19,18 +19,9 @@ const ComicsListItem = (props) => {
               }}
             />
           </View>
-          <View style={styles.title}>
-            <Text
-              numberOfLines={1}
-              style={[textStyles.BoldSemi, {fontSize: 12}]}>
-              {item.title}
-            </Text>
+          <View style={styles.title}>             
             {item.prices.length > 0 ? (
-              <Text
-                style={[textStyles.BoldSemi, {fontSize: 12}]}
-                numberOfLines={1}>
-                price: {item.prices[0].price}
-              </Text>
+              <Text style={[textStyles.BoldSemi,{fontSize:12}]} numberOfLines={1}>price: {item.prices[0].price}</Text>
             ) : null}
           </View>
         </View>
