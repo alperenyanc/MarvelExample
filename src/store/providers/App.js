@@ -7,7 +7,7 @@ export default class AppStore extends Store {
   @observable limit = 10;
   @observable data = [];
   @action setLimit = (count)=>{
-    this.limit = this.limit+count
+    this.limit = count
   }
   @action setData =(data)=>{
     this.data = data;
