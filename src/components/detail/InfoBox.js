@@ -18,7 +18,7 @@ const InfoBox = (props) => {
           }
            </View>
            <View style={styles.title}>
-               <Text style={[textStyles.bol,{fontSize:18}]} >2005 to now comics</Text>
+               <Text style={[textStyles.bold,{fontSize:18}]} >From 2005 to today comics</Text>
            </View>
            {
                comics ?

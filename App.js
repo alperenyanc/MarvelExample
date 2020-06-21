@@ -9,6 +9,7 @@ import CharactersList from "./src/screens/list/CharactersList";
 import CharactersDetail from "./src/screens/detail/CharactersDetail"
 import { initializeStores } from "./src/store/Configure.store.js";
 import { Provider } from "mobx-react";
+import { textStyles } from './src/assets/style/main';
  
  
 const Stack = createStackNavigator();
@@ -59,6 +60,8 @@ export default class App extends React.Component {
         drawerContentOptions={{
           activeTintColor: '#fff',
           itemStyle: { marginVertical: 10 },
+          inactiveTintColor:'#595454',
+          labelStyle:{fontSize:16,fontWeight: "700"}
         }}
         initialRouteName="Home">
           <Drawer.Screen name="Home" component={HomeScreen} />
