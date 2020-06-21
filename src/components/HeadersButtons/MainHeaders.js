@@ -2,8 +2,28 @@ import React from 'react'
 
 import { View, TouchableOpacity, StyleSheet, Image, Text } from "react-native";
 import { imagesHeader } from '../../assets/images';
+import { textStyles } from '../../assets/style/main';
 
- 
+ export const MainHeader = (props) =>{
+	 const {navigation,title}=props;
+	 return(
+		<View style={styles.headerBox}>
+        <TouchableOpacity
+        style={{position:'absolute',width:'100%',left:10}}
+        onPress={()=>navigation.openDrawer()}
+         
+        >
+            <Image 
+            style={{height:20,width:20}}
+            resizeMode='center'
+            source={imagesHeader.hamburger}
+            />
+          </TouchableOpacity>
+	 <Text style={[styles.headerTitle,textStyles.boldWhite]}>{title}</Text>
+         
+        </View>
+	 )
+ }
 
 
 export const DetailHeader = (props) => {
@@ -95,5 +115,17 @@ const styles = StyleSheet.create({
 		fontSize:20,
 		color:'white',
 		fontWeight:'bold'
-	}
+	},
+	headerBox: {
+		width: '100%',
+		justifyContent:'center',
+		alignItems: 'center',
+		backgroundColor: 'red',
+		height: 50,
+		flexDirection:'row'
+	  },
+	  headerTitle: {
+		fontSize: 16,     
+		alignSelf:'center'
+	  },
 });

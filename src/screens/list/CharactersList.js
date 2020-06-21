@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View, FlatList,	ActivityIndicator,} from 'react-native';
+import {Text, StyleSheet, View, FlatList,	ActivityIndicator,TouchableOpacity,Image} from 'react-native';
 import {connect} from '../../store/Api'; 
 import {inject, observer} from 'mobx-react';
 import ListItem from '../../components/list/ListItem';
+import { imagesHeader } from '../../assets/images';
+import { textStyles } from '../../assets/style/main';
+import { MainHeader } from '../../components/HeadersButtons/MainHeaders';
+ 
  
 @inject('app')
 @observer
@@ -77,9 +81,8 @@ export default class CharactersList extends Component {
     let data = app.data;
     return (
       <View style={styles.container}>
-        <View style={styles.headerBox}>
-          <Text style={styles.headerTitle}>Marvel Characters</Text>
-        </View>
+        <MainHeader navigation={navigation} title="Marvel Characters" />
+        
         <FlatList                 
           numColumns={2} 
           howsHorizontalScrollIndicator={false}
@@ -100,14 +103,14 @@ const styles = StyleSheet.create({
   },
   headerBox: {
     width: '100%',
-    justifyContent: 'center',
+    justifyContent:'center',
     alignItems: 'center',
     backgroundColor: 'red',
     height: 50,
+    flexDirection:'row'
   },
   headerTitle: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: 'white',
+    fontSize: 16,     
+    alignSelf:'center'
   },
 });

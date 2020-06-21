@@ -10,17 +10,8 @@ import CharactersList from "./src/screens/list/CharactersList";
 import CharactersDetail from "./src/screens/detail/CharactersDetail"
 import { initializeStores } from "./src/store/Configure.store.js";
 import { Provider } from "mobx-react";
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>No New Notifications!</Text>
-      <Button 
-      onPress={() => navigation.goBack()}
-      title="Go back home"
-      />
-    </View>
-  );
-}
+import NotificationsScreen from './src/screens/drawer/NotificationsScreen';
+ 
 const Stack = createStackNavigator();
 function HomeScreen() {
   return (
@@ -61,7 +52,16 @@ export default class App extends React.Component {
       <Provider {...this.stores}>
  <SafeAreaView style={{flex:1}} >
         <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Navigator 
+         drawerStyle={{
+          backgroundColor: '#e63020',
+          width: 200,
+        }}
+        drawerContentOptions={{
+          activeTintColor: '#fff',
+          itemStyle: { marginVertical: 10 },
+        }}
+        initialRouteName="Home">
           <Drawer.Screen name="Home" component={HomeScreen} />
           <Drawer.Screen name="Notifications" component={NotificationsScreen} />
           <Drawer.Screen name="Contact" component={Contact} />

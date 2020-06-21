@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Text, StyleSheet, View } from 'react-native'
 import { MainHeader } from '../../components/HeadersButtons/MainHeaders';
 
-export default class Contact extends Component {
+export default class NotificationsScreen extends Component {
     constructor(props) {
         super(props);
          
@@ -11,9 +11,9 @@ export default class Contact extends Component {
         const{navigation}=this.props;
         return (
             <View style={styles.container} >
-                <MainHeader navigation={navigation} title="Contact Us"/>
+                <MainHeader navigation={navigation} title="Notifications Screen"/>
                 
-                <Text style={{alignSelf:'center'}} > Contact us </Text>
+                <Text style={{alignSelf:'center'}} > NotificationsScreen </Text>
             </View>
         )
     }
