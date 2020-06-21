@@ -8,15 +8,15 @@ import {connect} from '../../store/Api';
 export default class CharactersDetail extends Component {
   constructor(props) {
     super(props);
-    this.state={
-      comics:[],
-    }
+    this.state = {
+      comics: [],
+    };
   }
-  get_detail = async (id) => {     
-    let res = await connect('get_characters', null,id);
-     await this.setState({
-     comics : res.results
-   })  
+  get_detail = async (id) => {
+    let res = await connect('get_characters', null, id);
+    await this.setState({
+      comics: res.results,
+    });
   };
   componentDidMount = async () => {
     const {id} = await this.props.route.params.item;
@@ -29,7 +29,7 @@ export default class CharactersDetail extends Component {
         params: {item},
       },
     } = this.props;
-    const {comics}=this.state;
+    const {comics} = this.state;
     return (
       <View style={styles.container}>
         <DetailHeader
@@ -39,7 +39,7 @@ export default class CharactersDetail extends Component {
           background={'red'}
         />
         <ImageBox item={item.thumbnail} />
-        <InfoBox item={item} comics={comics}/>
+        <InfoBox item={item} comics={comics} />
       </View>
     );
   }

@@ -36,27 +36,30 @@ const Contact = (props) => {
         </Text>
         <Text style={[styles.title, textStyles.bold]}>Consumer Inquiries</Text>
         <Text style={[styles.descriptions, textStyles.boldSemi]}>
-          For FAQ's related to Marvel Comics and Marvel.com: Visit the   
+          For FAQ's related to Marvel Comics and Marvel.com: Visit the
           <Text
             onPress={() => Linking.openURL('https://www.marvel.com/help/')}
             style={{color: 'red'}}>
-           {' '} Help Page
-          </Text>.
-          {"\n"}
-          {"\n"}
-           Marvel.com, Marvel Comics app, and Marvel Digital Comics
-          Unlimited Subscriptions: For any inquiries unresolved by the Help
-          Page, please use the Contact Form  
-          <Text
-            onPress={() => Linking.openURL('https://www.marvel.com/help/contact')}
-            style={{color: 'red'}}>
-            {' '} here
+            {' '}
+            Help Page
           </Text>
-          {"\n"}
-          {"\n"}
-            For Print Subscriptions:
-          {"\n"}
-
+          .{'\n'}
+          {'\n'}
+          Marvel.com, Marvel Comics app, and Marvel Digital Comics Unlimited
+          Subscriptions: For any inquiries unresolved by the Help Page, please
+          use the Contact Form
+          <Text
+            onPress={() =>
+              Linking.openURL('https://www.marvel.com/help/contact')
+            }
+            style={{color: 'red'}}>
+            {' '}
+            here
+          </Text>
+          {'\n'}
+          {'\n'}
+          For Print Subscriptions:
+          {'\n'}
           Marvel Subscriptions PO Box 727 New Hyde Park, NY 11040 TOLL FREE:
           888-511-5480 marvelsubs@midtowncomics.com See also: Subscriptions FAQ
         </Text>

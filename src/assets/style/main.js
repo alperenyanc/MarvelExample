@@ -1,78 +1,75 @@
-import { StyleSheet, Dimensions } from "react-native";
-const { width, height } = Dimensions.get("window");
-import { colorsText } from "./color";
+import {StyleSheet, Dimensions} from 'react-native';
+const {width, height} = Dimensions.get('window');
+import {colorsText} from './color';
 
 const TypePhone =
   width <= 363
-    ? "s"
+    ? 's'
     : width > 363 && width <= 500
-    ? "md"
+    ? 'md'
     : width > 500 && width <= 950
-    ? "l"
-    : "xl";
+    ? 'l'
+    : 'xl';
 
 const FontSize = (number) => {
-  if (TypePhone == "s") {
+  if (TypePhone == 's') {
     return number - 2;
   }
-  if (TypePhone == "md") {
+  if (TypePhone == 'md') {
     return number;
   }
-  if (TypePhone == "l") {
+  if (TypePhone == 'l') {
     return number + 2;
   }
-  if (TypePhone == "xl") {
+  if (TypePhone == 'xl') {
     return number + 6;
   }
 };
- 
 
 const textStyles = StyleSheet.create({
   bold: {
-    color: colorsText.main,    
-    fontWeight: "700",
+    color: colorsText.main,
+    fontWeight: '700',
   },
   boldWhite: {
-    color: colorsText.white,    
-    fontWeight: "700",
+    color: colorsText.white,
+    fontWeight: '700',
   },
-  boldNC: {    
-    fontWeight: "700",
+  boldNC: {
+    fontWeight: '700',
   },
   boldExtra: {
     color: colorsText.main,
-    fontWeight: "900",
+    fontWeight: '900',
   },
   boldExtraWhite: {
     color: colorsText.white,
-    fontWeight: "900",
+    fontWeight: '900',
   },
   boldExtraNC: {
-    fontWeight: "900",
+    fontWeight: '900',
   },
   boldSemi: {
     color: colorsText.main,
-    fontWeight: "500",
+    fontWeight: '500',
   },
   boldSemiWhite: {
     color: colorsText.white,
-    fontWeight: "500",
+    fontWeight: '500',
   },
   boldSemiNC: {
-    fontWeight: "500",
+    fontWeight: '500',
   },
   normal: {
     color: colorsText.main,
   },
   normalWhite: {
-    color: colorsText.white, 
+    color: colorsText.white,
   },
-  normalNC: {
-     
-  },
- 
+  normalNC: {},
+
   toUpperCase: {
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
   letterSpacing1: {
     letterSpacing: 1,
@@ -119,12 +116,4 @@ const textStyles = StyleSheet.create({
   },
 });
 
- 
-
- 
-export {
-  textStyles,  
-  width,   
-  TypePhone,
-  height,   
-};
+export {textStyles, width, TypePhone, height};
