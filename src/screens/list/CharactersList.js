@@ -20,6 +20,7 @@ import {MainHeader} from '../../components/HeadersButtons/MainHeaders';
 export default class CharactersList extends Component {
   constructor(props) {
     super(props);
+    // comment 3
     this.state = {
       is_loadingMore: true,
       is_lastItem: false,
