@@ -35,6 +35,7 @@ export default class CharactersList extends Component {
     }
     app.setData(res.results);
   };
+  //comment
   getMoreLists = async () => {
     await this.setState({
       is_loadingMore: true,
