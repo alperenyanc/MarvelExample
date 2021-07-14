@@ -25,6 +25,7 @@ export default class CharactersList extends Component {
       is_lastItem: false,
     };
   }
+  // comment 2
   get_list = async (limit) => {
     const {app} = this.props;
     let res = await connect('get_characters', limit);
@@ -35,6 +36,7 @@ export default class CharactersList extends Component {
     }
     app.setData(res.results);
   };
+  //comment
   getMoreLists = async () => {
     await this.setState({
       is_loadingMore: true,
